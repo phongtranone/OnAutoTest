@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" name="MyApp">
+    <Appenders>
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%-5level] %d{dd-MM-yyyy HH:mm:ss} [%t] %c{1} - %msg%n"/>
+        </Console>
+<!--        <File name="LogToFile" fileName="logs/app-xml.log">-->
+<!--            <PatternLayout pattern="[%-5level] %d{dd-MM-yyyy HH:mm:ss} [%t] %c{1} - %msg%n"/>-->
+<!--        </File>-->
+        <RollingFile name="RollingFile" fileName="logs/app.log"
+                     filePattern="logs/$${date:yyyy-MM-dd}/app-%d{yyyy-MM-dd-HH-mm-ss}.log.zip">
+            <PatternLayout>
+                <Pattern>[%-5level] %d{dd-MM-yyyy HH:mm:ss} [%t] %c{1} - %msg%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <OnStartupTriggeringPolicy />
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="LogToConsole"/>
+<!--            <AppenderRef ref="LogToFile"/>-->
+            <AppenderRef ref="RollingFile"/>
+        </Root>
+    </Loggers>
+</Configuration>

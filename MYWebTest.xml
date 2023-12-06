@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Smoke Test">
+    <test name="SmokeTesting" parallel="false" thread-count="5">
+        <classes>
+            <class name="runner.MYWebTestRunner"/>
+        </classes>
+    </test> <!-- Test --></suite> <!-- Default Suite -->
+<!-- Run test: mvn clean test -Dsurefire.suiteXmlFiles=MYWebTest.xml-->
+<!-- Report Collections   https://reports.cucumber.io/report-collections/0bf6e1c3-cd77-421a-a957-104a807be3f7-->
