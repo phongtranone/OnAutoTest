@@ -17,15 +17,9 @@ public class sample{
     //output : 1+3 = 4
 
     public static void main(String[] args) {
-        List<Integer> list = Arrays.asList(1,2,3,5,4,1,3);
-        List<Integer> listTwo = getIntegerListDuplicateUsingSet(list);
-        Set<Integer> setList = new HashSet<>(Arrays.asList(1,2,3,5,4,1,3));
-
-        List<String> listStr = Arrays.asList("d", "c", "b", "a", "b", "b", "a");
-
-        System.out.println("Sorted list: " + sortReverseOrderForASet(setList));
-
-      //  System.out.println("Output: " + getDuplicatedStringList(listStr));
+    String price = "2.830.000đfdsafd";
+    price = price.replaceAll("[^0-9.]+","");
+    System.out.println("Price: " + price);
 
     }
 

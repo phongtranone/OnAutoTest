@@ -4,16 +4,30 @@ import core.utils.Log;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import pages.SnapSearchPage;
+import pages.SearchPage;
 
-public class SnapSearchAction extends SnapSearchPage {
-    public SnapSearchAction(WebDriver driver, Logger log) {
+public class SearchAction extends SearchPage {
+    public SearchAction(WebDriver driver, Logger log) {
         super(driver, log);
     }
 
-    public void enterDepartureValue(String fromValue){
-        Log.info("ENTER DEPARTURE: " + fromValue);
-        enterSearches(fromTxtLocator, fromValue);
+    public void searchTheProductName(String productNameTxt){
+        Log.info("ENTER THE PRODUCT NAME: " + productNameTxt);
+        enterSearches(searchBoxLocator, productNameTxt);
+    }
+
+    public String getTheFoundResultText(){
+        return getTextValue(foundOneResultTxtLocator);
+    }
+
+    public String getProductNameText(){
+        return getTextValue(productNameTxtLocator);
+    }
+
+    public String getProductPriceText(){
+        String actualProductPriceTxt = getTextValue(productPriceTxtLocator);
+        actualProductPriceTxt = actualProductPriceTxt.replaceAll("[^0-9.]+","");
+        return actualProductPriceTxt;
     }
 
     public void enterDestinationValue(String toValue){
@@ -25,8 +39,7 @@ public class SnapSearchAction extends SnapSearchPage {
         clickOnElement(element);
         enterDataBySendKey(element, searchText);
         pause(1000);
-        clickOnElement(sectionLocator(searchText));
-
+        pressEnterKeyBoard(element);
     }
 
     public void confirmFlightDate(){

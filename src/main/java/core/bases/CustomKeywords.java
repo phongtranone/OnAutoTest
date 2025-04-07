@@ -12,6 +12,7 @@ import java.util.function.Function;
 
 public class CustomKeywords extends BasePage {
     int MAX_TIME_OUT = 20;
+    int TIME_OUT_TO_CHECK_ELEMENT_VISIBLE = 3;
     int POLLING_PERIOD = 3;
     protected CustomKeywords(WebDriver driver, Logger log) {
         super(driver, log);
@@ -20,6 +21,11 @@ public class CustomKeywords extends BasePage {
     protected void clickOnElement(WebElement element){
         fluentWaitForVisibilityOfElement(element);
         element.click();
+    }
+
+    protected void pressEnterKeyBoard(WebElement element){
+        fluentWaitForVisibilityOfElement(element);
+        element.sendKeys(Keys.ENTER);
     }
 
     protected void enterDataBySendKey(WebElement element, String data){
@@ -112,10 +118,22 @@ public class CustomKeywords extends BasePage {
         return element.isDisplayed();
     }
 
-    public boolean checkVisibilityOfElement(WebElement element){
-        boolean flag = false;
+    public boolean checkVisibilityOfElementLocated(By elementLocator){
+        boolean flag;
         try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(MAX_TIME_OUT));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(TIME_OUT_TO_CHECK_ELEMENT_VISIBLE));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(elementLocator));
+            flag = true;
+        } catch (Exception e) {
+            flag = false;
+        }
+        return flag;
+    }
+
+    public boolean checkVisibilityOfElement(WebElement element){
+        boolean flag;
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(TIME_OUT_TO_CHECK_ELEMENT_VISIBLE));
             wait.until(ExpectedConditions.visibilityOf(element));
             flag = true;
         } catch (Exception e) {
@@ -123,6 +141,8 @@ public class CustomKeywords extends BasePage {
         }
         return flag;
     }
+
+
 
     public boolean checkElementToBeClickable(WebElement element){
        boolean flag = false;
