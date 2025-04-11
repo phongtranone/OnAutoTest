@@ -1,7 +1,7 @@
 Feature: Filter HEAD PHONE by the branch
   Can quickly find a HEAD PHONE and view the product specification
 
-  @RegressionTesting @RegressionTestingGroup1 @RegressionTestingGroup4
+  @RegressionTesting @RegressionTestingGroup1 @RegressionTestingGroup4 @REG002
   Scenario Outline: Filter the head phone by branch name and view the product specification
     Given Go to the home page
     And Go to the "accessoriesMenu" menu

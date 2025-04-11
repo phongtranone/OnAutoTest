@@ -1,7 +1,7 @@
 Feature: Filter CAMERA by the branch
   Can quickly find a CAMERA and view the product specification
 
-  @RegressionTesting @RegressionTestingGroup1 @RegressionTestingGroup4
+  @RegressionTesting @RegressionTestingGroup1 @RegressionTestingGroup4 @REG001
   Scenario Outline: Filter the camera by branch name and view the product specification
     Given Go to the home page
     And Go to the "accessoriesMenu" menu
