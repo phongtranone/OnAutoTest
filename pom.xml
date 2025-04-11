@@ -21,6 +21,9 @@
     <maven.compiler.source>20</maven.compiler.source>
     <maven.compiler.target>20</maven.compiler.target>
     <maven.surefire.plugin.version>3.5.3</maven.surefire.plugin.version>
+    <!-- Property value -->
+    <xmlFile>RegressionTest.xml</xmlFile>
+    <threadcount>1</threadcount>
   </properties>
 
   <build>
@@ -31,14 +34,14 @@
         <version>${maven.surefire.plugin.version}</version>
         <configuration>
           <suiteXmlFiles>
-<!--            <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>-->
-            <suiteXmlFile>RegressionTest.xml</suiteXmlFile>
+            <suiteXmlFile>${xmlFile}</suiteXmlFile>
+<!--            <suiteXmlFile>RegressionTest.xml</suiteXmlFile>-->
           </suiteXmlFiles>
           <properties>
             <property>
               <name>dataproviderthreadcount</name>
-              <value>2</value>
-<!--              <value>${threadcount}</value>-->
+<!--              <value>2</value>-->
+              <value>${threadcount}</value>
             </property>
           </properties>
         </configuration>
