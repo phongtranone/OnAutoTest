@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Smoke Test" verbose="1" configfailurepolicy="continue">
+    <test name="SmokeTesting" annotations="JDK">
+        <classes>
+            <class name="runner.SmokeTestRunner"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Default Suite -->
+<!-- Run test: mvn clean test -Dsurefire.suiteXmlFiles=MYWebTest.xml-->
+<!-- Report Collections   https://reports.cucumber.io/report-collections/0bf6e1c3-cd77-421a-a957-104a807be3f7-->
