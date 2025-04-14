@@ -1,7 +1,7 @@
 Feature: Filter PHONE by the branch
   Can quickly find a PHONE and view the product description
 
-  @RegressionTesting @RegressionTestingGroup2
+  @RegressionTesting @Reg_Filter_009
   Scenario Outline: Filter the phone by branch name and view the product description
     Given Go to the home page
     And Go to the "phoneMenu" menu

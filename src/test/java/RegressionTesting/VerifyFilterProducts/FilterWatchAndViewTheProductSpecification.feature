@@ -1,7 +1,7 @@
 Feature: Filter WATCH by the branch
   Can quickly find a WATCH and view the product specification
 
-  @RegressionTesting @RegressionTestingGroup2
+  @RegressionTesting @Reg_Filter_010
   Scenario Outline: Filter the watch by branch name and view the product specification
     Given Go to the home page
     And Go to the "watchMenu" menu

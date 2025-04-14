@@ -1,7 +1,7 @@
 Feature: Filter TABLET by the branch
   Can quickly find a TABLET and view the product specification
 
-  @RegressionTesting @RegressionTestingGroup2
+  @RegressionTesting @Reg_Filter_008
   Scenario Outline: Filter the tablet by branch name and view the product specification
     Given Go to the home page
     And Go to the "tabletMenu" menu

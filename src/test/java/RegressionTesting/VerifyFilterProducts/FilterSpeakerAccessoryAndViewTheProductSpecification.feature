@@ -1,7 +1,7 @@
 Feature: Filter SPEAKER by the branch
   Can quickly find a SPEAKER and view the product specification
 
-  @RegressionTesting @REG007
+  @RegressionTesting @Reg_Filter_007
   Scenario Outline: Filter the speaker by branch name and view the product specification
     Given Go to the home page
     And Go to the "accessoriesMenu" menu

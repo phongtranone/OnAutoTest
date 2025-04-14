@@ -1,7 +1,7 @@
 Feature: Filter MONITOR by the branch
   Can quickly find a MONITOR and view the product specification
 
-  @RegressionTesting @REG004
+  @RegressionTesting @Reg_Filter_004
   Scenario Outline: Filter the monitor by branch name and view the product specification
     Given Go to the home page
     And Go to the "monitorAndPrinterMenu" menu
