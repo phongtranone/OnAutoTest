@@ -1,7 +1,7 @@
 Feature: Filter LAPTOP by the branch
   Can quickly find a LAPTOP and view the product specification
 
-  @RegressionTesting @RegressionTestingGroup1 @RegressionTestingGroup4 @REG003
+  @RegressionTesting @Reg_Filter_003
   Scenario Outline: Filter the laptop by branch name and view the product specification
     Given Go to the home page
     And Go to the "laptopMenu" menu

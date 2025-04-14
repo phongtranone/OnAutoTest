@@ -1,7 +1,7 @@
 Feature: Filter SMART WATCH by the branch
   Can quickly find a SMART WATCH and view the product specification
 
-  @RegressionTesting @RegressionTestingGroup2
+  @RegressionTesting @REG003
   Scenario Outline: Filter the smart watch by branch name and view the product specification
     Given Go to the home page
     And Go to the "smartWatchMenu" menu

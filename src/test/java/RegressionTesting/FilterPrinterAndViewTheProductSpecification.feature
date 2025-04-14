@@ -1,7 +1,7 @@
 Feature: Filter PRINTER by the branch
   Can quickly find a PRINTER and view the product specification
 
-  @RegressionTesting @RegressionTestingGroup1
+  @RegressionTesting @REG005
   Scenario Outline: Filter the printer by branch name and view the product specification
     Given Go to the home page
     And Go to the "monitorAndPrinterMenu" menu
