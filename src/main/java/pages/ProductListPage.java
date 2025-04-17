@@ -86,9 +86,9 @@ public class ProductListPage extends CustomKeywords {
     protected WebElement orientWatchBrandLocator;
     @FindBy(xpath = "//div[@class='quick-link v2  ']/a[3]")
     protected WebElement casioWatchBrandLocator;
-    @FindBy(xpath = "//div[@class='quickfilter']/a[2]")
-    protected WebElement monitorCategoryLocator;
     @FindBy(xpath = "//div[@class='quickfilter']/a[3]")
+    protected WebElement monitorCategoryLocator;
+    @FindBy(xpath = "//div[@class='quickfilter']/a[4]")
     protected WebElement printerCategoryLocator;
 
     @FindBy(xpath = "//div[@class='lst-quicklink ']/a[2]")

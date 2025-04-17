@@ -17,6 +17,7 @@ public class SearchAction extends SearchPage {
     }
 
     public String getTheFoundResultText(){
+        pause(2000);
         return getTextValue(foundOneResultTxtLocator);
     }
 
@@ -38,7 +39,7 @@ public class SearchAction extends SearchPage {
     public void enterSearches(WebElement element, String searchText){
         clickOnElement(element);
         enterDataBySendKey(element, searchText);
-        pause(1000);
+        pause(3000);
         pressEnterKeyBoard(element);
     }
 

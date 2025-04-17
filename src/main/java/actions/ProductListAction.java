@@ -243,9 +243,9 @@ public class ProductListAction extends ProductListPage {
     }
 
     public void viewProductDetails(String productNameTxt){
-        pause(2000);
+        pause(3000);
         productNameXpath = String.format(productNameXpath, productNameTxt);
         scrollUntilElementAndClick(driver.findElement(By.xpath(productNameXpath)));
-        pause(2000);
+        pause(3000);
     }
 }

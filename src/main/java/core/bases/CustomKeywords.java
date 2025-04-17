@@ -165,11 +165,15 @@ public class CustomKeywords extends BasePage {
         boolean flag = false;
         while (!flag){
             if(checkElementToBeClickable(element)){
+                pause(2000);
                 clickOnElement(element);
+                pause(2000);
                 flag = true;
             }else {
+                pause(2000);
                 ((JavascriptExecutor)driver).executeScript("window.scrollBy(0,150)"
                         , "");
+                pause(2000);
             }
         }
     }

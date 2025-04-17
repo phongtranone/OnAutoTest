@@ -13,5 +13,5 @@ Feature: Filter CAMERA by the branch
     And Verify accessory camera vision "<vision>"
 
     Examples:
-      |cameraModel                    |resolution   |rotationAngle     |vision         |
-      |Camera IP 360 Độ 2MP Ezviz C6N |2 MP (1080p) |Xoay ngang 360 độ |10 m trong tối |
+      |cameraModel                   |resolution   |rotationAngle         |vision         |
+      |Camera IP 360 Độ 5MP EZVIZ H6 |5 MP (1620p) |Quét xoay tròn 353 độ |10 m trong tối |

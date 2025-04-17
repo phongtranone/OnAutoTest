@@ -18,6 +18,7 @@ public class ProductDetailsAction extends ProductDetailsPage {
         pause(2000);
         goToTheProductSpecification();
         specificationItemXpath = String.format(specificationItemXpath, specificationItemTxt);
+        pause(2000);
         return checkVisibilityOfElement(driver.findElement(By.xpath(specificationItemXpath)));
     }
 }

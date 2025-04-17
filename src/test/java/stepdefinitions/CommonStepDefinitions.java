@@ -9,10 +9,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.plugin.event.Node;
 import org.testng.Assert;
 
-public class WebStepDefinitions extends BaseTestCase {
+public class CommonStepDefinitions extends BaseTestCase {
     HomePageAction homePageAction;
     SearchAction searchAction;
     HotelListingAction hotelListingAction;
