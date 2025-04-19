@@ -1,9 +1,15 @@
 package actions;
 
+import core.utils.Common;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import pages.ProductListPage;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class ProductListAction extends ProductListPage {
     public static final String SAMSUNG_CATEGORY = "samsung";
@@ -46,6 +52,9 @@ public class ProductListAction extends ProductListPage {
     public static final String CANON_PRINTER_BRAND_NAME = "canon";
     public static final String BROTHER_PRINTER_BRAND_NAME = "brother";
     public static final String HP_PRINTER_BRAND_NAME = "hp";
+
+    public static final String  ASCENDING_ORDER_TYPE = "ascending";
+    public static final String  DESCENDING_ORDER_TYPE = "descending";
 
     public ProductListAction(WebDriver driver, Logger log) {
         super(driver, log);
@@ -247,5 +256,59 @@ public class ProductListAction extends ProductListPage {
         productNameXpath = String.format(productNameXpath, productNameTxt);
         scrollUntilElementAndClick(driver.findElement(By.xpath(productNameXpath)));
         pause(3000);
+    }
+
+    public void sortByPrice(String orderTypeStr){
+        clickOnElement(sortPriceBtnLocator);
+        pause(2000);
+        switch (orderTypeStr) {
+            case ASCENDING_ORDER_TYPE -> clickOnElement(ascendingPriceBtnLocator);
+            case DESCENDING_ORDER_TYPE -> clickOnElement(descendingPriceBtnLocator);
+        }
+        pause(2000);
+    }
+
+    public boolean verifySortOrder(String orderTypeStr){
+        pause(3000);
+        List<Integer> firstList = new ArrayList<>();
+        List<Integer> secondList = new ArrayList<>();
+        switch (orderTypeStr){
+            case ASCENDING_ORDER_TYPE -> {
+                for (WebElement element : productListPricesLocator) {
+                    scrollToElement(element);
+                    String priceTxt = element.getText();
+                    priceTxt = priceTxt.replaceAll("[^0-9]", "");
+                    firstList.add(Common.convertStringToInteger(priceTxt));
+                    secondList.add(Common.convertStringToInteger(priceTxt));
+                }
+
+                /* After get the price list and store 2 array list, to verify the list is sorted by ascending:
+                 Sort by ascending for first list and compare to second list, they should be same*/
+                Collections.sort(firstList);
+                if (firstList.equals(secondList)){
+                    pause(3000);
+                    return true;
+                }
+            }
+            case DESCENDING_ORDER_TYPE -> {
+                for (WebElement element : productListPricesLocator) {
+                    scrollToElement(element);
+                    String priceTxt = element.getText();
+                    priceTxt = priceTxt.replaceAll("[^0-9]", "");
+                    firstList.add(Common.convertStringToInteger(priceTxt));
+                    secondList.add(Common.convertStringToInteger(priceTxt));
+                }
+
+                /* After get the price list and store 2 array list, to verify the list is sorted by descending:
+                 Sort by descending for first list and compare to second list, they should be same*/
+                firstList.sort(Collections.reverseOrder());
+                if (firstList.equals(secondList)){
+                    pause(3000);
+                    return true;
+                }
+            }
+        }
+        pause(3000);
+        return true;
     }
 }

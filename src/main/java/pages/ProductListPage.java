@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class ProductListPage extends CustomKeywords {
     protected ProductListPage(WebDriver driver, Logger log) {
         super(driver, log);
@@ -106,6 +108,15 @@ public class ProductListPage extends CustomKeywords {
     protected WebElement brotherPrinterBrandLocator;
     @FindBy(xpath = "//div[@class='lst-quicklink ']/a[3]")
     protected WebElement hpPrinterBrandLocator;
+
+    @FindBy(xpath = "//p[@class='click-sort']/span[@class='sort-show']")
+    protected WebElement sortPriceBtnLocator;
+    @FindBy(xpath = "//div[@class='sort-select-main sort ']/p[1]/a")
+    protected WebElement ascendingPriceBtnLocator;
+    @FindBy(xpath = "//div[@class='sort-select-main sort ']/p[2]/a")
+    protected WebElement descendingPriceBtnLocator;
+    @FindBy(xpath = "//strong[@class='price']")
+    protected List<WebElement> productListPricesLocator;
 
     protected String productNameXpath = "//li/a/h3[contains(text(),'%s')]";
 }
