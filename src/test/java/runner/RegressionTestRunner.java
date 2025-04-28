@@ -2,10 +2,23 @@ package runner;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
+import org.testng.annotations.DataProvider;
 
-@CucumberOptions(tags = "@RegressionTesting", features = {"src/test/java"},
+@CucumberOptions(
+        features = {"src/test/java"},
         glue = {"stepdefinitions"},
-        plugin = {"pretty", "json:target/cucumber-reports/Cucumber.json","html:target/cucumber-reports/Cucumber.html"},
+        tags = "@RegressionTesting",
+        plugin = {"pretty","html:target/cucumber-reports/Cucumber.html",
+                "pretty", "json:target/cucumber-reports/Cucumber.json",
+                "pretty", "json:target/cucumber-reports/Cucumber.xml",
+                "timeline:target/cucumber-reports"
+                },
         monochrome = true)
 
-public class RegressionTestRunner extends AbstractTestNGCucumberTests{}
+public class RegressionTestRunner extends AbstractTestNGCucumberTests{
+    @Override
+    @DataProvider(parallel = true)
+    public Object[][] scenarios() {
+        return super.scenarios();
+    }
+}

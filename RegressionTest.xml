@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Regression Test" verbose="1" parallel="tests" configfailurepolicy="continue" thread-count="2">
+<suite name="Regression Test" verbose="1" configfailurepolicy="continue">
     <test name="RegressionTesting4" annotations="JDK">
         <classes>
-            <class name="runner.RegressionTestGroup4Runner"/>
+            <class name="runner.RegressionTestRunner"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Default Suite -->
-<!-- Run test: mvn clean test -Dsurefire.suiteXmlFiles=MYWebTest.xml-->
-<!-- Report Collections   https://reports.cucumber.io/report-collections/0bf6e1c3-cd77-421a-a957-104a807be3f7-->
