@@ -11,4 +11,4 @@ Feature: Smoke testing
 
     Examples:
       | phoneName                    |productPrice |
-      | Samsung Galaxy A06 4GB/64GB  |2.690.000    |
+      | Samsung Galaxy A06 4GB/64GB  |3.690.000    |

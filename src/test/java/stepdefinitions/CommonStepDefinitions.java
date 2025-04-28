@@ -5,10 +5,13 @@ import basetest.BaseTestCase;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeStep;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
 
 public class CommonStepDefinitions extends BaseTestCase {
@@ -40,7 +43,20 @@ public class CommonStepDefinitions extends BaseTestCase {
 //        productDetailsAction = new ProductDetailsAction(driver, logger);
     }
 
-    @After
+    @After(order = 1)
+    public void takeScraenshotOnFailure(Scenario scenario) {
+
+        if (scenario.isFailed()) {
+
+            TakesScreenshot ts = (TakesScreenshot) getDriver();
+
+            byte[] src = ts.getScreenshotAs(OutputType.BYTES);
+            scenario.attach(src, "image/png", "screenshot");
+        }
+
+    }
+
+    @After(order = 0)
     public void tearDown() {
         super.tearDown();
     }
