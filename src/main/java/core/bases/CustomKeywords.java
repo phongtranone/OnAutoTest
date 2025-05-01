@@ -2,13 +2,10 @@ package core.bases;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
 
 import java.time.Duration;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
 
 public class CustomKeywords extends BasePage {
     int MAX_TIME_OUT = 20;
@@ -23,6 +20,11 @@ public class CustomKeywords extends BasePage {
         element.click();
     }
 
+    protected void javaScriptClickOnElement(WebElement element){
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", element);
+    }
+
     protected void pressEnterKeyBoard(WebElement element){
         fluentWaitForVisibilityOfElement(element);
         element.sendKeys(Keys.ENTER);
@@ -32,68 +34,12 @@ public class CustomKeywords extends BasePage {
         fluentWaitForVisibilityOfElement(element);
         element.sendKeys(data);
     }
-
-    protected void enterDataByKeyboard(WebElement element, String data){
-        Actions actions = new Actions(driver);
-        //Dayang Bay Resort
-        actions.sendKeys(element, "D").perform();
-        actions.sendKeys(element, "a").perform();
-        actions.sendKeys(element, "y").perform();
-        actions.sendKeys(element, "a").perform();
-        actions.sendKeys(element, "n").perform();
-        actions.sendKeys(element, "g").perform();
-        actions.sendKeys(element, " ").perform();
-        actions.sendKeys(element, "B").perform();
-        actions.sendKeys(element, "a").perform();
-        actions.sendKeys(element, "y").perform();
-        //actions.sendKeys(element, " ").perform();
-//        actions.sendKeys(element, "R").perform();
-//        actions.sendKeys(element, "e").perform();
-//        actions.sendKeys(element, "s").perform();
-//        actions.sendKeys(element, "o").perform();
-//        actions.sendKeys(element, "r").perform();
-//        actions.sendKeys(element, "t").perform();
-        pause(2000);
-    }
-
-    protected void clearDataInTextBox(WebElement element){
-        element.sendKeys(Keys.CONTROL + "a");
-        element.sendKeys(Keys.DELETE);
-    }
     public static void pause(long milis){
         try {
             Thread.sleep(milis);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    public boolean waitForJStoLoad() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-
-        // wait for jQuery to load
-        ExpectedCondition<Boolean> jQueryLoad = new ExpectedCondition<Boolean>() {
-            @Override
-            public Boolean apply(WebDriver driver) {
-                try {
-                    return ((JavascriptExecutor) driver).executeScript("return jQuery.active").toString()
-                            .equals("0");
-                }
-                catch (Exception e) {
-                    return true;
-                }
-            }
-        };
-
-        // wait for Javascript to load
-        ExpectedCondition<Boolean> jsLoad = new ExpectedCondition<Boolean>() {
-            @Override
-            public Boolean apply(WebDriver driver) {
-                return ((JavascriptExecutor) driver).executeScript("return document.readyState").toString()
-                        .equals("complete");
-            }
-        };
-        return wait.until(jQueryLoad) && wait.until(jsLoad);
     }
 
     public void fluentWaitForVisibilityOfElement(WebElement element){
@@ -112,10 +58,6 @@ public class CustomKeywords extends BasePage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(MAX_TIME_OUT));
         wait.until(ExpectedConditions.visibilityOf(element));
 
-    }
-
-    public boolean checkElementDisplayed(WebElement element){
-        return element.isDisplayed();
     }
 
     public boolean checkVisibilityOfElementLocated(By elementLocator){
@@ -156,9 +98,35 @@ public class CustomKeywords extends BasePage {
         return flag;
     }
 
+    public boolean checkElementToBeVisible(WebElement element){
+        boolean flag = false;
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(MAX_TIME_OUT));
+            wait.until(ExpectedConditions.visibilityOfAllElements(element));
+            flag = true;
+        } catch (Exception e) {
+            flag = false;
+        }
+        return flag;
+    }
+
     public void scrollToElement(WebElement element){
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
                 , element);
+    }
+
+    public void scrollUntilElementToBeVisible(WebElement element){
+        boolean flag = false;
+        while (!flag){
+            if(checkElementToBeVisible(element)){
+                pause(1000);
+                flag = true;
+            }else {
+                pause(1000);
+                ((JavascriptExecutor)driver).executeScript("window.scrollBy(0,150)"
+                        , "");
+            }
+        }
     }
 
     public void scrollUntilElementAndClick(WebElement element){

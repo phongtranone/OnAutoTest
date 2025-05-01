@@ -117,6 +117,11 @@ public class ProductListPage extends CustomKeywords {
     protected WebElement descendingPriceBtnLocator;
     @FindBy(xpath = "//strong[@class='price']")
     protected List<WebElement> productListPricesLocator;
+    @FindBy(xpath = "//ul[@class='listproduct']//li//h3")
+    protected List<WebElement> productNameListLocator;
+    @FindBy(xpath = "//div[@class='filter-total ']//i[@class='un-filter-v2']")
+    protected WebElement filterBtnLocator;
+
 
     protected String productNameXpath = "//li/a/h3[contains(text(),'%s')]";
 }

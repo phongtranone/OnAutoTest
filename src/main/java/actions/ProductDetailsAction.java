@@ -1,5 +1,6 @@
 package actions;
 
+import core.utils.Common;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -20,5 +21,21 @@ public class ProductDetailsAction extends ProductDetailsPage {
         specificationItemXpath = String.format(specificationItemXpath, specificationItemTxt);
         pause(2000);
         return checkVisibilityOfElement(driver.findElement(By.xpath(specificationItemXpath)));
+    }
+
+    public void addProductToCart(){
+        pause(2000);
+        scrollToElement(addToCartBtnLocator);
+        javaScriptClickOnElement(addToCartBtnLocator);
+    }
+
+    public String getNumberOfProductInTheCart(){
+        return getTextValue(numberOfProductOfCartLocator);
+    }
+
+    public void viewCartDetails(){
+        pause(2000);
+        clickOnElement(cartBtnLocator);
+        pause(2000);
     }
 }

@@ -17,10 +17,10 @@ import org.testng.Assert;
 public class CommonStepDefinitions extends BaseTestCase {
     HomePageAction homePageAction;
     SearchAction searchAction;
-    HotelListingAction hotelListingAction;
-    FlightTimeChangingAction flightTimeChangingAction;
     ProductListAction productListAction;
     ProductDetailsAction productDetailsAction;
+    CartDetailsAction cartDetailsAction;
+    FilterAction filterAction;
 
     @Before
     public void setUp() {
@@ -31,14 +31,12 @@ public class CommonStepDefinitions extends BaseTestCase {
     public void initPageObjects() {
         homePageAction = new HomePageAction(getDriver(), logger);
         searchAction = new SearchAction(getDriver(), logger);
-        hotelListingAction = new HotelListingAction(getDriver(), logger);
-        flightTimeChangingAction = new FlightTimeChangingAction(getDriver(), logger);
         productListAction = new ProductListAction(getDriver(), logger);
         productDetailsAction = new ProductDetailsAction(getDriver(), logger);
+        cartDetailsAction = new CartDetailsAction(getDriver(), logger);
+        filterAction = new FilterAction(getDriver(), logger);
 //        homePageAction = new HomePageAction(driver, logger);
 //        searchAction = new SearchAction(driver, logger);
-//        hotelListingAction = new HotelListingAction(driver, logger);
-//        flightTimeChangingAction = new FlightTimeChangingAction(driver, logger);
 //        productListAction = new ProductListAction(driver, logger);
 //        productDetailsAction = new ProductDetailsAction(driver, logger);
     }

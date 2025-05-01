@@ -26,10 +26,6 @@ public class SearchPage extends CustomKeywords {
     @FindBy(xpath = "//input[@placeholder='To']")
     protected WebElement toTxtLocator;
 
-    protected WebElement sectionLocator(String destinationValue){
-        return driver.findElement(By.xpath(String.format("//span[text()='%s']",destinationValue)));
-    }
-
     @FindBy(xpath = "//a[@id='closebutton']")
     protected WebElement confirmBtnLocator;
 

@@ -1,6 +1,7 @@
 package actions;
 
 import core.utils.Common;
+import core.utils.Log;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -309,6 +310,33 @@ public class ProductListAction extends ProductListPage {
             }
         }
         pause(3000);
-        return true;
+        return false;
+    }
+
+    public void goToFilterFunction(){
+        clickOnElement(filterBtnLocator);
+        pause(2000);
+    }
+
+    public List<Integer> getProductPriceList(){
+        Log.info("GET THE LIST OF PRODUCT PRICE");
+        pause(2000);
+        List<Integer> productPriceList = new ArrayList<>();
+        for(WebElement element : productListPricesLocator){
+            scrollUntilElementToBeVisible(element);
+            String productPrice = getTextValue(element);
+            productPrice = productPrice.replaceAll("[^0-9]", "");
+            productPriceList.add(Common.convertStringToInteger(productPrice));
+        }
+        return productPriceList;
+    }
+    public List<String> getProductNameList(){
+        Log.info("GET THE LIST OF PRODUCT NAME");
+        pause(2000);
+        List<String> productNameList = new ArrayList<>();
+        for(WebElement element : productNameListLocator){
+            productNameList.add(getTextValue(element));
+        }
+        return productNameList;
     }
 }
