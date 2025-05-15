@@ -44,16 +44,16 @@ public class CartDetailsAction extends CartDetailsPage {
     public void increaseQuantity(String quantity ){
         pause(2000);
         int expectedQuantity = Common.convertStringToInteger(quantity);
-        int currentQuantity = Common.convertStringToInteger(quantityTextLocator.getText());
+        int currentQuantity = Common.convertStringToInteger(quantityTextLocator.getAttribute("value"));
         while (expectedQuantity != currentQuantity){
             clickOnElement(plusBtnLocator);
-            pause(1000);
+            pause(2000);
             currentQuantity = currentQuantity + 1;
         }
     }
 
     public String getCurrentQuantity(){
         pause(1000);
-        return quantityTextLocator.getText();
+        return quantityTextLocator.getAttribute("value");
     }
 }
