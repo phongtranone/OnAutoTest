@@ -332,11 +332,39 @@ public class ProductListAction extends ProductListPage {
     }
     public List<String> getProductNameList(){
         Log.info("GET THE LIST OF PRODUCT NAME");
-        pause(2000);
+        pause(4000);
         List<String> productNameList = new ArrayList<>();
         for(WebElement element : productNameListLocator){
             productNameList.add(getTextValue(element));
         }
         return productNameList;
+    }
+    public List<String> getProductRamMemoryList(){
+        Log.info("GET THE LIST OF PRODUCT RAM MEMORY");
+        pause(2000);
+        List<String> productRamMemoryList = new ArrayList<>();
+        for(WebElement element : productRamMemoryListLocator){
+            productRamMemoryList.add(getTextValue(element));
+        }
+        return productRamMemoryList;
+    }
+
+    public List<String> getProductHardDiskList(){
+        Log.info("GET THE LIST OF PRODUCT HARD DISK");
+        pause(2000);
+        List<String> productHardDiskList = new ArrayList<>();
+        for(WebElement element : productHardDiskListLocator){
+            productHardDiskList.add(getTextValue(element));
+        }
+        return productHardDiskList;
+    }
+    public List<String> getProductStorageList(){
+        Log.info("GET THE LIST OF PRODUCT STORAGE");
+        pause(2000);
+        List<String> productStorageList = new ArrayList<>();
+        for(WebElement element : productStorageListLocator){
+            productStorageList.add(getTextValue(element));
+        }
+        return productStorageList;
     }
 }

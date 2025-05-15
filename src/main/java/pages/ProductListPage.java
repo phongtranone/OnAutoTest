@@ -119,9 +119,14 @@ public class ProductListPage extends CustomKeywords {
     protected List<WebElement> productListPricesLocator;
     @FindBy(xpath = "//ul[@class='listproduct']//li//h3")
     protected List<WebElement> productNameListLocator;
+    @FindBy(xpath = "//ul[@class='listproduct']//li//div[@class='item-compare gray-bg']/span[1]")
+    protected List<WebElement> productRamMemoryListLocator;
+    @FindBy(xpath = "//ul[@class='listproduct']//li//div[@class='item-compare gray-bg']/span[2]")
+    protected List<WebElement> productHardDiskListLocator;
     @FindBy(xpath = "//div[@class='filter-total ']//i[@class='un-filter-v2']")
     protected WebElement filterBtnLocator;
-
+    @FindBy(xpath = "//div[@class='utility']/p[3]")
+    protected List<WebElement> productStorageListLocator;
 
     protected String productNameXpath = "//li/a/h3[contains(text(),'%s')]";
 }

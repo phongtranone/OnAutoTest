@@ -14,4 +14,4 @@ Feature: Add ADAPTER to the cart
 
     Examples:
       |adapterModel                                     |productPrice   |
-      |Adapter chuyển đổi USB C 6 in 1 Ugreen 60384     | 845.000đ      |
+      |Adapter chuyển đổi Type C 4 in 1 Xmobile DS606H  | 310.000đ      |

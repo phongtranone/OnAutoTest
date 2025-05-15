@@ -14,4 +14,4 @@ Feature: Add AIRPODS CASE COVER to the cart
 
     Examples:
       |airpodsCaseCoverModel                                     |productPrice   |
-      |Túi đựng AirPods Pro 2 nhựa PC TPU UniQ Clyde Lock Case   | 518.000đ      |
+      |Túi đựng AirPods Pro 2 nhựa PC TPU UniQ Clyde Lock Case   | 488.000đ      |

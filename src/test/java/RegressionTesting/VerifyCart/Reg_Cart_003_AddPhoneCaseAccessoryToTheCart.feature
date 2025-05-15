@@ -14,4 +14,4 @@ Feature: Add PHONE CASE to the cart
 
     Examples:
       |phoneCaseModel                                       |productPrice   |
-      |Ốp lưng MagSafe iPhone 16 Pro Max Nhựa Trong Apple   | 1.430.000đ      |
+      |Ốp lưng MagSafe iPhone 16 Pro Max Nhựa Trong Apple   | 1.430.000đ    |

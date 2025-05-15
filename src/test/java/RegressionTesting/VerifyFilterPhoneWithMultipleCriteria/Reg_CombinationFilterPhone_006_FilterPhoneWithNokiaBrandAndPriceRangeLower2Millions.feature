@@ -1,8 +1,8 @@
-Feature: Filter PHONE with Samsung brand and price range
+Feature: Filter PHONE with Nokia brand and price range
   Can quickly filter a PHONE LIST
 
-  @RegressionTesting @FilterWithBrandNameAndPriceRange_001
-  Scenario Outline: Filter the phone by Samsung branch name and price range
+  @RegressionTesting @CombinationFilter_006
+  Scenario Outline: Filter the phone by NOKIA branch name and price range
     Given Go to the home page
     And Go to the "phoneMenu" menu
     And Go to the Filter function
@@ -13,5 +13,5 @@ Feature: Filter PHONE with Samsung brand and price range
     And Verify filter result is in price range "<priceRange>"
 
     Examples:
-      |brandName    |priceRange            |
-      |Samsung      |from 2 to 4 millions  |
+      |brandName      |priceRange         |
+      |Nokia          |lower 2 millions   |

@@ -154,4 +154,9 @@ public class CustomKeywords extends BasePage {
         Random random = new Random();
         return random.nextInt(range);
     }
+
+    public void clickElementBasedOnValue(String xpathLocator, String value){
+        xpathLocator = String.format(xpathLocator, value);
+        clickOnElement(driver.findElement(By.xpath(xpathLocator)));
+    }
 }
