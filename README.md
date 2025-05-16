@@ -15,7 +15,7 @@ This Hybrid Automation Test Framework was built using Cucumber (BDD), Selenium W
 - [License](#license)
 
 
-## 🚀 Features
+## 🚀 Features #<a name="features"></a> Section 1
 
 - Behavior-Driven Development with Cucumber
 - Selenium WebDriver for browser automation
