@@ -51,7 +51,19 @@ This Hybrid Automation Test Framework was built using Cucumber (BDD), Selenium W
 ### Installation
 - git clone https://github.com/phongtranone/OnAutoTest.git
 - Open the project directory in the IDE
-- Execute the test suite by right-clicking on an XML file, such as SmokeTest.xml
 
+## ▶️ <a name="execution-instructions"></a> Execution Instructions
+### Run feature files
+- Execute Cucumber Features by right-clicking on a feature file, such as TestForACommonFlow.feature
 
+### Run test suites with Maven + TestNG
+- Open the terminal from the IDE
+- Execute a test suite like FunctionalTest
+- mvn clean test -DxmlFile="FunctionalTest.xml"
 
+### Run Cucumber Feature with Specific Tags
+#### Run a specific tag
+mvn clean test -D"cucumber.filter.tags=@Reg_Cart_001"
+OR
+#### Run multiple specific tags
+mvn clean test -D"cucumber.filter.tags=@Reg_Cart_002 or @Reg_Cart_003"
