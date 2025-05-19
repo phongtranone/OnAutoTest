@@ -62,8 +62,12 @@ This Hybrid Automation Test Framework was built using Cucumber (BDD), Selenium W
 - mvn clean test -DxmlFile="FunctionalTest.xml"
 
 ### Run Cucumber Feature with Specific Tags
-#### Run a specific tag
+#### Example: run a specific tag
 mvn clean test -D"cucumber.filter.tags=@Reg_Cart_001"
-OR
-#### Run multiple specific tags
+#### Example: execute multiple specific tags
 mvn clean test -D"cucumber.filter.tags=@Reg_Cart_002 or @Reg_Cart_003"
+
+### Execute a test suite in parallel with a specific thread count
+mvn clean test -DxmlFile="RegressionTest.xml" -Dthreadcount=6 -D"cucumber.filter.tags=@RegressionTesting"
+
+## ⚙️ <a name="jenkins-integration"></a> Execution Instructions Jenkins Integration
