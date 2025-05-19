@@ -68,6 +68,21 @@ mvn clean test -D"cucumber.filter.tags=@Reg_Cart_001"
 mvn clean test -D"cucumber.filter.tags=@Reg_Cart_002 or @Reg_Cart_003"
 
 ### Execute a test suite in parallel with a specific thread count
+Example: run Regression test suite with 6 threads,
 mvn clean test -DxmlFile="RegressionTest.xml" -Dthreadcount=6 -D"cucumber.filter.tags=@RegressionTesting"
 
 ## ⚙️ <a name="jenkins-integration"></a> Execution Instructions Jenkins Integration
+- Create a Jenkins job (Freestyle or Pipeline).
+- Enable parameterize and create some parameters:
+![image](https://github.com/user-attachments/assets/e91a9644-9e94-4b21-9927-1b3d3b9923b5)
+![image](https://github.com/user-attachments/assets/1212a646-f461-4745-8809-e00fb03cc2ac)
+
+- Configure GitHub repository:
+![image](https://github.com/user-attachments/assets/d517e0ba-e92b-4454-bca4-0976625734c2)
+
+- Configure Maven build step:
+![image](https://github.com/user-attachments/assets/a0112b50-b41b-4bfb-b680-ae43f44468aa)
+- 
+
+
+Use the following command in "Build" step:
