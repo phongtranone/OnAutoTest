@@ -73,9 +73,12 @@ mvn clean test -DxmlFile="RegressionTest.xml" -Dthreadcount=6 -D"cucumber.filter
 
 ## ⚙️ <a name="jenkins-integration"></a> Execution Instructions Jenkins Integration
 - Create a Jenkins job (Freestyle or Pipeline).
-- Enable parameterize and create some parameters:
+- Enable the option "This project is parameterized" and create some parameters:
 ![image](https://github.com/user-attachments/assets/e91a9644-9e94-4b21-9927-1b3d3b9923b5)
 ![image](https://github.com/user-attachments/assets/1212a646-f461-4745-8809-e00fb03cc2ac)
+![image](https://github.com/user-attachments/assets/2d3d7b14-c277-447f-b1f8-12f85121a163)
+![image](https://github.com/user-attachments/assets/6bcc7475-22d8-413d-b106-7f28609553c5)
+
 
 - Configure GitHub repository:
 ![image](https://github.com/user-attachments/assets/d517e0ba-e92b-4454-bca4-0976625734c2)
