@@ -20,13 +20,10 @@ This Hybrid Automation Test Framework was built using Cucumber (BDD), Selenium W
 - Behavior-Driven Development with Cucumber
 - Selenium WebDriver for browser automation
 - TestNG for test execution and assertions
-- Parallel execution via TestNG XML
+- Parallel execution via DataProvider in TestNG
 - Page Object Model (POM) design pattern
-- Data-driven testing using Excel/CSV/JSON
 - CI/CD integration with Jenkins
-- Cucumber HTML and extent reports
-
----
+- Cucumber HTML report
 
 ## 🛠️ Technology Stack
 
@@ -37,26 +34,9 @@ This Hybrid Automation Test Framework was built using Cucumber (BDD), Selenium W
 - Maven
 - Jenkins
 - Git
-- Extent Reports or Cucumber Reports
-
----
+- Cucumber Reports
 
 ## 📁 Project Structure
-
-```text
-HybridFramework/
-├── src/test/java/
-│   ├── stepdefinitions/
-│   ├── runners/
-│   ├── pageobjects/
-│   ├── utilities/
-│   └── testng/
-├── src/test/resources/
-│   ├── features/
-│   └── config.properties
-├── test-output/                # TestNG reports
-├── target/                     # Compiled output
-├── pom.xml
-├── Jenkinsfile (if using pipeline)
-└── README.md
+The directory structure for this project is outlined below:
+![image](https://github.com/user-attachments/assets/178686b8-b2ee-48f6-ad33-ce973b0cfcc9)
 
