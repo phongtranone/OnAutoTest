@@ -25,7 +25,7 @@ This Hybrid Automation Test Framework was built using Cucumber (BDD), Selenium W
 - CI/CD integration with Jenkins
 - Cucumber HTML report
 
-## 🛠️ Technology Stack
+## 🛠️ <a name="technology-stack"></a> Technology Stack
 
 - Java
 - Selenium WebDriver
@@ -36,7 +36,7 @@ This Hybrid Automation Test Framework was built using Cucumber (BDD), Selenium W
 - Git
 - Cucumber Reports
 
-## 📁 Project Structure
+## 📁 <a name="project-structure"></a> Project Structure
 ### The directory structure for this project is outlined below:
 
 ![image](https://github.com/user-attachments/assets/178686b8-b2ee-48f6-ad33-ce973b0cfcc9)
