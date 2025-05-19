@@ -41,3 +41,17 @@ This Hybrid Automation Test Framework was built using Cucumber (BDD), Selenium W
 
 ![image](https://github.com/user-attachments/assets/178686b8-b2ee-48f6-ad33-ce973b0cfcc9)
 
+## 🧰 <a name="getting-started"></a> Getting Started
+### Prerequisite
+
+- Java JDK 21+
+- Maven 3.5.3+
+- IDE: IntelliJ IDEA
+
+### Installation
+- git clone https://github.com/phongtranone/OnAutoTest.git
+- Open the project directory in the IDE
+- Execute the test suite by right-clicking on an XML file, such as SmokeTest.xml
+
+
+
