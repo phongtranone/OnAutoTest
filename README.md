@@ -37,6 +37,7 @@ This Hybrid Automation Test Framework was built using Cucumber (BDD), Selenium W
 - Cucumber Reports
 
 ## 📁 Project Structure
-The directory structure for this project is outlined below:
+### The directory structure for this project is outlined below:
+
 ![image](https://github.com/user-attachments/assets/178686b8-b2ee-48f6-ad33-ce973b0cfcc9)
 
