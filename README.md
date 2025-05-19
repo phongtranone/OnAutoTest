@@ -10,9 +10,7 @@ This Hybrid Automation Test Framework was built using Cucumber (BDD), Selenium W
 - [Execution Instructions](#execution-instructions)
 - [Jenkins Integration](#jenkins-integration)
 - [Reporting](#reporting)
-- [Best Practices](#best-practices)
-- [Contributing](#contributing)
-- [License](#license)
+- [Author](#author)
 
 
 ## 🚀 <a name="features"></a> Features
@@ -79,8 +77,9 @@ mvn clean test -DxmlFile="RegressionTest.xml" -Dthreadcount=6 -D"cucumber.filter
 ![image](https://github.com/user-attachments/assets/6bcc7475-22d8-413d-b106-7f28609553c5)
 
 
-- Configure GitHub repository:
-![image](https://github.com/user-attachments/assets/d517e0ba-e92b-4454-bca4-0976625734c2)
+- Configure GitHub repository with your repo and your credential:
+![image](https://github.com/user-attachments/assets/840fa497-3d95-421f-8cc8-5a3faa46d7fe)
+
 
 - Configure Maven build step with parameters created above:
 ![image](https://github.com/user-attachments/assets/a0112b50-b41b-4bfb-b680-ae43f44468aa)
@@ -92,3 +91,13 @@ Follow the guideline to enable Jenkin plugin for the Cucumber HTML report and Sl
 - https://plugins.jenkins.io/slack/
 - https://www.youtube.com/watch?v=EDVZli8GdUM
 
+## 📊 <a name="reporting"></a> Reporting
+### Cucumber HTML report
+![image](https://github.com/user-attachments/assets/b26a7699-5905-4e33-8aac-9c38d53e42d7)
+
+### Slack notification
+![image](https://github.com/user-attachments/assets/eb10a1bd-8748-4fd4-8d70-df9804898597)
+
+
+## 📄 <a name="author"></a> Author
+ <a href='https://www.linkedin.com/in/phong-tran-476576102/'>Phong Tran</a>
