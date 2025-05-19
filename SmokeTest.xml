@@ -7,5 +7,5 @@
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Default Suite -->
-<!-- Run test: mvn clean test -Dsurefire.suiteXmlFiles=MYWebTest.xml-->
+<!-- Run test: mvn clean test -Dsurefire.suiteXmlFiles=SmokeTest.xml-->
 <!-- Report Collections   https://reports.cucumber.io/report-collections/0bf6e1c3-cd77-421a-a957-104a807be3f7-->

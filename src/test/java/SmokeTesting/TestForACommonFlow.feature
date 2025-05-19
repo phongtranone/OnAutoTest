@@ -10,5 +10,5 @@ Feature: Smoke testing
     And Validate the product price "<productPrice>"
 
     Examples:
-      | phoneName                    |productPrice |
-      | Samsung Galaxy A06 4GB/64GB  |3.690.000    |
+      | phoneName                         |productPrice |
+      | Samsung Galaxy A56 5G 12GB/256GB  |11.190.000   |
