@@ -50,11 +50,11 @@ public class ProductListPage extends CustomKeywords {
     @FindBy(xpath = "//div[@class='lst-quicklink ']/a[3]")
     protected WebElement oppoTabletBrandLocator;
 
-    @FindBy(xpath = "//div[@class='list-category']//div[3]/a")
+    @FindBy(xpath = "//div[contains(@class,'list-category')]//div[3]/a")
     protected WebElement headPhoneAccessoryLocator;
-    @FindBy(xpath = "//div[@class='list-category']//div[4]/a")
+    @FindBy(xpath = "//div[contains(@class,'list-category')]//div[4]/a")
     protected WebElement speakerAccessoryLocator;
-    @FindBy(xpath = "//div[@class='list-category']//div[5]/a")
+    @FindBy(xpath = "//div[contains(@class,'list-category')]//div[5]/a")
     protected WebElement cameraAccessoryLocator;
 
     @FindBy(xpath = "//div[@class='lst-quicklink ']/a[1]")
