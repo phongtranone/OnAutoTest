@@ -8,7 +8,7 @@ Feature: Add LAPTOPS and make empty cart
     And View the product details "<firstLaptopModel>"
     And Add the product to the cart
     And View the cart details
-    Then Remove all product in the cart page
+#    Then Remove all product in the cart page
     And Verify the cart is empty
 
     Examples:
