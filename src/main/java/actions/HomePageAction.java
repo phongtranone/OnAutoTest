@@ -29,6 +29,7 @@ public class HomePageAction extends HomePage {
     }
 
     public void goToTheMenu(String menuNameText){
+        Log.info("CLICK ON THE MENU: " + menuNameText);
         switch (menuNameText) {
             case PHONE_MENU -> clickOnElement(phoneMenuLocator);
             case LAPTOP_MENU -> clickOnElement(laptopMenuLocator);

@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import core.utils.Log;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -31,6 +32,7 @@ public class FilterStepDefinitions {
 
     @And("Verify filter result that contains brand name {string}")
     public void verifyFilterResultThatContainsBrandName(String expectedBrandName) {
+        Log.info("VERIFY THAT EACH RESULT CONTAINS BRAND NAME: " + expectedBrandName);
         for(String productName : commonStepDefinitions.productListAction.getProductNameList()){
             if((expectedBrandName.trim()).equals("iPhone (Apple)")){
                 Assert.assertTrue(productName.contains("iPhone"));
@@ -45,6 +47,7 @@ public class FilterStepDefinitions {
 
     @And("Verify filter result is in price range {string}")
     public void viewFilterResultIsInPriceRange(String priceRange) {
+        Log.info("ENSURE THAT EACH PRICE MUST BE IN RANGE: " + priceRange);
         for(Integer productPrice : commonStepDefinitions.productListAction.getProductPriceList()){
             Assert.assertTrue(commonStepDefinitions.filterAction.verifyProductPriceIsInPriceRange(priceRange, productPrice));
         }
@@ -94,6 +97,7 @@ public class FilterStepDefinitions {
     }
     @And("Verify filter result of tablet that contains storage option {string}")
     public void verifyFilterResultOfTabletThatContainsStorageOption(String storageOption) {
+        Log.info("VERIFY THAT EACH RESULT CONTAINS THE STORAGE OPTION: " + storageOption);
         for(String actualStorage : commonStepDefinitions.productListAction.getProductStorageList()){
             Assert.assertTrue(actualStorage.toLowerCase().contains(storageOption.toLowerCase()));
         }

@@ -1,8 +1,8 @@
-Feature: Filter TABLET with TCL brand and storage and range price
+Feature: Filter TABLET with LENOVO brand and storage and range price
   Can quickly filter a TABLET LIST
 
-  @DemoTesting @DemoFilter02
-  Scenario Outline: Filter the tablet by TCL branch name and storage and range price
+  @DemoTesting @DemoFilter01
+  Scenario Outline: Filter the tablet by LENOVO branch name and storage and range price
     Given Go to the home page
     And Go to the "tabletMenu" menu
     And Go to the Filter function
@@ -15,5 +15,5 @@ Feature: Filter TABLET with TCL brand and storage and range price
     And Verify filter result of tablet that contains storage option "<storageOption>"
 
     Examples:
-      |brandName   |priceRange         |storageOption    |
-      |TCL         |lower 3 millions   |32 GB            |
+      |brandName      |priceRange               |storageOption    |
+      |Lenovo         |from 3 to 8 millions     |64 GB            |

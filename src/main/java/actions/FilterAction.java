@@ -1,5 +1,6 @@
 package actions;
 
+import core.utils.Log;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -85,6 +86,7 @@ public class FilterAction extends FilterPage {
         pause(2000);
     }
     public void selectPriceRange(String priceRange){
+        Log.info("IN THE FILTER FUNCTION, SELECT THE RANGE OF PRICE: " + priceRange);
         pause(2000);
         switch (priceRange.trim()){
             case LOWER_2_MILLIONS -> clickOnElement(priceRangeLower2MillionsLocator);
@@ -101,6 +103,7 @@ public class FilterAction extends FilterPage {
     }
 
     public void viewFilterResults(){
+        Log.info("VIEW THE FILTER RESULT");
         pause(2000);
         javaScriptClickOnElement(viewFilterResultBtnLocator);
     }
@@ -238,6 +241,7 @@ public class FilterAction extends FilterPage {
         pause(2000);
     }
     public void selectTabletBrandName(String brandName){
+        Log.info("IN THE FILTER FUNCTION, SELECT THE BRAND NAME: " + brandName);
         pause(2000);
         if(brandName.equalsIgnoreCase(IPAD_BRAND)){
             clickElementBasedOnValue(brandNameMenuLocatorXpath, IPAD_BRAND);
@@ -264,6 +268,7 @@ public class FilterAction extends FilterPage {
     }
 
     public void selectStorageOption(String storageOption){
+        Log.info("IN THE FILTER FUNCTION, SELECT THE STORAGE OPTION: " + storageOption);
         pause(2000);
         if(storageOption.trim().equalsIgnoreCase("32 gb")){
             storageOptionLocatorXpath = String.format(storageOptionLocatorXpath, ROM_32GB);

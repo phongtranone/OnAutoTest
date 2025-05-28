@@ -315,12 +315,12 @@ public class ProductListAction extends ProductListPage {
     }
 
     public void goToFilterFunction(){
+        Log.info("GO TO THE FILTER FUNCTION");
         clickOnElement(filterBtnLocator);
         pause(2000);
     }
 
     public List<Integer> getProductPriceList(){
-        Log.info("GET THE LIST OF PRODUCT PRICE");
         pause(2000);
         List<Integer> productPriceList = new ArrayList<>();
         for(WebElement element : productListPricesLocator){
@@ -332,7 +332,6 @@ public class ProductListAction extends ProductListPage {
         return productPriceList;
     }
     public List<String> getProductNameList(){
-        Log.info("GET THE LIST OF PRODUCT NAME");
         pause(4000);
         List<String> productNameList = new ArrayList<>();
         for(WebElement element : productNameListLocator){
@@ -360,7 +359,6 @@ public class ProductListAction extends ProductListPage {
         return productHardDiskList;
     }
     public List<String> getProductStorageList(){
-        Log.info("GET THE LIST OF PRODUCT STORAGE");
         pause(2000);
         List<String> productStorageList = new ArrayList<>();
         for(WebElement element : productStorageListLocator){
