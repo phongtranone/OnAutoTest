@@ -21,7 +21,7 @@ public class HomePageAction extends HomePage {
     }
 
     public void goToHomePage(){
-        Log.info("CLICK ON THE HOME PAGE");
+        Log.info("CLICK ON THE LOGO TO MOVE THE HOME PAGE");
         if(checkVisibilityOfElementLocated(By.xpath(iconCloseOfPromotionPopUpLocator))) {
             clickOnElement(driver.findElement(By.xpath(iconCloseOfPromotionPopUpLocator)));
         }

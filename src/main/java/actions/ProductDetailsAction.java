@@ -1,6 +1,7 @@
 package actions;
 
 import core.utils.Common;
+import core.utils.Log;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -24,6 +25,7 @@ public class ProductDetailsAction extends ProductDetailsPage {
     }
 
     public void addProductToCart(){
+        Log.info("ADD THE PRODUCT TO THE CART");
         pause(2000);
         scrollToElement(addToCartBtnLocator);
         javaScriptClickOnElement(addToCartBtnLocator);
@@ -34,6 +36,7 @@ public class ProductDetailsAction extends ProductDetailsPage {
     }
 
     public void viewCartDetails(){
+        Log.info("VIEW THE CART DETAILS");
         pause(2000);
         clickOnElement(cartBtnLocator);
         pause(2000);

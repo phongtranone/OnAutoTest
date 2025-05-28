@@ -29,11 +29,13 @@ public class CartDetailsAction extends CartDetailsPage {
         clickOnElement(confirmDeleteBtnLocator);
     }
     public boolean verifyCartIsEmpty(){
+        Log.info("ENSURE SHOWING OF THE EMPTY CART ICON");
         pause(2000);
         return emptyCartIconLocator.isDisplayed();
     }
 
     public void removeAllProductInTheCart(){
+        Log.info("REMOVE ALL PRODUCTS FROM THE CART PAGE");
         int count = listOfRemoveProductBtnLocator.size();
         while (count != 0){
             deleteProductInTheCart();

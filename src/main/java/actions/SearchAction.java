@@ -12,7 +12,7 @@ public class SearchAction extends SearchPage {
     }
 
     public void searchTheProductName(String productNameTxt){
-        Log.info("ENTER THE PRODUCT NAME: " + productNameTxt);
+        Log.info("ENTER INTO THE SEARCH BOX WITH THE TEXT: " + productNameTxt);
         enterSearches(searchBoxLocator, productNameTxt);
     }
 

@@ -253,6 +253,7 @@ public class ProductListAction extends ProductListPage {
     }
 
     public void viewProductDetails(String productNameTxt){
+        Log.info("VIEW THE DETAILS OF THE PRODUCT: " + productNameTxt);
         pause(3000);
         productNameXpath = String.format(productNameXpath, productNameTxt);
         scrollUntilElementAndClick(driver.findElement(By.xpath(productNameXpath)));
