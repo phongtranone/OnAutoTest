@@ -17,10 +17,10 @@ public class SearchPage extends CustomKeywords {
     @FindBy(xpath = "//div[@id='filter-aj']//p[@class='sort-total']")
     protected WebElement foundOneResultTxtLocator;
 
-    @FindBy(xpath = "//h3[preceding-sibling::p[contains(@class,'result-label')]]")
+    @FindBy(xpath = "//h3[preceding-sibling::div[contains(@class,'item-img')]]")
     protected WebElement productNameTxtLocator;
 
-    @FindBy(xpath = "//strong[preceding-sibling::p[contains(@class,'result-label')]]")
+    @FindBy(xpath = "//strong[@class='price']")
     protected WebElement productPriceTxtLocator;
 
     @FindBy(xpath = "//input[@placeholder='To']")
