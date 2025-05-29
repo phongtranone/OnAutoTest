@@ -11,4 +11,4 @@ Feature: Smoke testing
 
     Examples:
       | phoneName                         |productPrice |
-      | Samsung Galaxy A56 5G 12GB/256GB  |11.190.000   |
+      | Samsung Galaxy A56 5G 12GB/256GB  |11.390.000   |
