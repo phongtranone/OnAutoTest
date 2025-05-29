@@ -1,7 +1,7 @@
 Feature: Add PHONES and empty the cart
   Can quickly remove all PHONE in the cart page
 
-  @DemoTesting @DemoCart01
+  @RegressionTesting @DemoTesting @DemoCart01
   Scenario Outline: Add phones and remove all in the cart page
     Given Go to the home page
     When Search a product by the product name "<firstPhoneModel>"

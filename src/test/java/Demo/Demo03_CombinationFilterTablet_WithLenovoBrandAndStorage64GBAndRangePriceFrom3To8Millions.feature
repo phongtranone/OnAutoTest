@@ -1,7 +1,7 @@
 Feature: Filter TABLET with LENOVO brand and storage and range price
   Can quickly filter a TABLET LIST
 
-  @DemoTesting @DemoFilter01
+  @RegressionTesting @DemoTesting @DemoFilter01
   Scenario Outline: Filter the tablet by LENOVO branch name and storage and range price
     Given Go to the home page
     And Go to the "tabletMenu" menu

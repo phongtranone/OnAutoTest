@@ -1,7 +1,7 @@
 Feature: Add LAPTOPS and make empty cart
   Can quickly remove all LAPTOP in the cart page
 
-  @DemoTesting @DemoCart02_backup
+  @DemoTesting1 @DemoCart02_backup
   Scenario Outline: Add laptops and remove all in the cart page
     Given Go to the home page
     When Search a product by the product name "<firstLaptopModel>"

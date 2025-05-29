@@ -1,7 +1,7 @@
 Feature: Filter TABLET with TCL brand and storage and range price
   Can quickly filter a TABLET LIST
 
-  @DemoTesting @DemoFilter02
+  @DemoTesting1 @DemoFilter02
   Scenario Outline: Filter the tablet by TCL branch name and storage and range price
     Given Go to the home page
     And Go to the "tabletMenu" menu
