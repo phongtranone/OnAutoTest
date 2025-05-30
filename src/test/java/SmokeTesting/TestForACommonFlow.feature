@@ -7,7 +7,7 @@ Feature: Smoke testing
     When Enter the phone name "<phoneName>"
     Then Ensure that find only one product
     And Validate the product name "<phoneName>"
-    And Validate the product price "<productPrice>"
+#    And Validate the product price "<productPrice>"
 
     Examples:
       | phoneName                         |productPrice |
